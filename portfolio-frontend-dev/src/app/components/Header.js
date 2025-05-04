@@ -1,11 +1,11 @@
 import Image from "next/image";
 const Header = () => {
 	return (
-		<div className="flex  items-center justify-between w-full px-5 py-4  border-white">
+		<header className="flex  items-center justify-between w-full px-5 py-4  border-white">
 			<div className="flex  justify-center ">
-				<h1 className=" font-[MainFont]  text-white text-center font-bold text-4xl gap-2 ">
+				<h2 className=" font-[MainFont]  text-white text-center font-bold text-4xl gap-2 ">
 					Portfolio
-				</h1>
+				</h2>
 				<Image
 					src="/Logo_Gradient-removebg-preview.png"
 					alt="logo"
@@ -34,7 +34,7 @@ const Header = () => {
 					Contact
 				</button>
 			</div>
-		</div>
+		</header>
 	);
 };
 
