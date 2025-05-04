@@ -16,7 +16,7 @@ const Home = () => {
 					Sergi López <br />
 					Hernández
 				</h1>
-				<p className="text-[#00b7ff] text-center text-4xl mt-4 ">
+				<p className="text-[#8716f7] text-transparent bg-clip-text bg-linear-65 from-purple-500 to-blue-800 text-center text-4xl mt-4 ">
 					Frontend Developer
 				</p>
 				<div className="flex justify-center items-center ">
