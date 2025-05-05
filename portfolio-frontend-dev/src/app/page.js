@@ -10,12 +10,12 @@ import { React } from "react";
 import { Link, Element } from "react-scroll";
 const Home = () => {
 	return (
-		<div className="flex-col  w-full min-h-screen ">
+		<main className="flex-col   w-full min-h-[300vh] ">
 			<Header />
 			{/* Sección Hero Home */}
 			<Hero />
 			{/* Sección About */}
-		</div>
+		</main>
 	);
 };
 

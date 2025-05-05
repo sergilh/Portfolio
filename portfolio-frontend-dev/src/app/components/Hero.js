@@ -18,11 +18,13 @@ const Hero = () => {
 		offset: ["start start", "end start"],
 	});
 	const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
-	const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+	const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		setEffectFinish(latest >= 0.99);
+		setEffectFinish(latest >= 0.9);
 	});
+
+	const text = "Developer";
 
 	return (
 		<>
@@ -33,11 +35,20 @@ const Hero = () => {
 						className=" w-full h-full items-center justify-center pt-30"
 					>
 						<motion.h1 className="text-white md:text-9xl text-6xl transition-all duration-500  text-center">
-							<span className="text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text">
+							<span className="text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text ">
 								Frontend
 							</span>{" "}
 							<br />
-							Developer
+							{text.split("").map((letter, index) => {
+								return (
+									<span
+										key={index}
+										className="letter-hover-effect cursor-pointer"
+									>
+										{letter}
+									</span>
+								);
+							})}
 						</motion.h1>
 						<p className="text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4 ">
 							Sergi López Hernández
@@ -59,7 +70,7 @@ const Hero = () => {
 						</p>
 						<button
 							type="button"
-							className="flex border-[#c300ff] mx-auto mt-15 rounded-full border-3 p-2 shadow-lg  shadow-[#c300ff] hover:shadow-[#4400ff] hover:border-[#4400ff]  transition duration-500 text-white items-center justify-center text-center cursor-pointer"
+							className="flex border-[#c300ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#c300ff] hover:shadow-[#4400ff] hover:border-[#4400ff]  transition duration-500 text-white items-center justify-center text-center cursor-pointer"
 						>
 							View Projects
 						</button>

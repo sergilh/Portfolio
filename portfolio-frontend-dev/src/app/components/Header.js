@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const Header = () => {
 	return (
 		<header className="bg-[url('/paul-volkmer-fX-qWsXl5x8-unsplash.jpg')] bg-cover bg-end bg-no-repeat">
@@ -21,12 +22,14 @@ const Header = () => {
 					>
 						<span className="text-neon">Projects</span>
 					</button>
-					<button
-						type="button"
-						className="text-[#9526f0] font-bold text-2xl cursor-pointer hover:text-white transition-colors transition duration-400"
-					>
-						<span className="text-neon">About</span>
-					</button>
+					<Link href="#about">
+						<button
+							type="button"
+							className="text-[#9526f0] font-bold text-2xl cursor-pointer hover:text-white transition-colors transition duration-400"
+						>
+							<span className="text-neon">About</span>
+						</button>
+					</Link>
 
 					<button
 						type="button"

@@ -133,7 +133,7 @@ body {
     background-position: 100% 50%;
   }
 }
-/* Animación para el texto principal */
+/* Animación para section About */
 @keyframes fade-in {
   0% {
       opacity: 0;
@@ -145,6 +145,17 @@ body {
       transform: translateX(0);
     }
 }
+
+@keyframes slideIn{
+  from {
+      transform: translateX(var(--start-position,-100%));
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+
 
 
 
@@ -161,6 +172,29 @@ body {
 
 .hero-section.zoom-out{
   transform:scale(0.8);
+}
+
+/* Hover letras individuales */
+
+.letter-hover-effect{
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.letter-hover-effect:hover{
+  color: #4400ff;
+  transform: scale(1);
+}
+
+/* Zoom in Effect */
+.slideIn{
+  animation:slideIn 1s ease-out;
+}
+.slideIn-left{
+  --start-position: -100%
+}
+.slideIn-right{
+  --start-position: 100%
 }
 
 
