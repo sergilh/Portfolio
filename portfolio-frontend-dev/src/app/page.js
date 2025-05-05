@@ -3,16 +3,16 @@ import Header from "./components/Header";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 // React Server Components
-import { motion, useScroll } from "framer-motion";
+import { React, useState } from "react";
+import { useRouter } from "next/navigation";
+import { Link } from "react-scroll";
 const Home = () => {
-	const { scrollYProgress } = useScroll();
+	const router = useRouter();
+
 	return (
 		<div className="flex-col bg-[#141416] w-full h-full ">
 			<Header />
-			<div
-				className="flex-col justify-center items-center mt-20 animate-fade-in animate-border-neon "
-				style={{ scaleX: scrollYProgress }}
-			>
+			<div className="flex-col justify-center items-center mt-20 animate-fade-in animate-border-neon ">
 				<h1 className="text-white text-8xl text-center">
 					<span className="text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text">
 						Frontend
