@@ -6,7 +6,9 @@ export default function RootLayout({ children }) {
 			<head>
 				<title>Sergi López - Frontend Web Developer</title>
 			</head>
-			<body className="expansion-alids-init h-screen">{children}</body>
+			<body className="expansion-alids-init min-h-screen ">
+				{children}
+			</body>
 		</html>
 	);
 }
