@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 const Header = () => {
 	return (
-		<header className="bg-[url('/paul-volkmer-fX-qWsXl5x8-unsplash.jpg')] bg-cover bg-end bg-no-repeat">
-			<nav className="flex  items-center justify-between w-full px-5 py-4  border-white">
+		<header className=" bg-cover bg-end bg-no-repeat sticky top-0">
+			<nav className="flex  items-center justify-between w-full px-5 py-4  border-white ">
 				<div className="flex  justify-center ">
 					<h2 className=" font-[MainFont]  text-white text-center font-bold text-4xl gap-2 ">
 						Portfolio

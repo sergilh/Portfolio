@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
 	useTransform,
 	useScroll,
+	useSpring,
 	motion,
 	useMotionValueEvent,
 } from "framer-motion";
@@ -17,7 +18,7 @@ const Hero = () => {
 		target: ref,
 		offset: ["start start", "end start"],
 	});
-	const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
+	const scale = useTransform(scrollYProgress, [0, 1], [1, 14]);
 	const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -28,8 +29,8 @@ const Hero = () => {
 
 	return (
 		<>
-			<section ref={ref} id="home" className="h-[60vh]">
-				<div className="sticky top-0 h-screen scroll-smooth bg-cover bg-end bg-repeat-space flex items-center justify-center">
+			<section ref={ref} id="home" className="h-[100vh]">
+				<div className="sticky top-0 h-screen scroll-smooth bg-cover bg-end bg-repeat-space flex items-center justify-center p-10">
 					<motion.div
 						style={{ scale, opacity }}
 						className=" w-full h-full items-center justify-center pt-30"
