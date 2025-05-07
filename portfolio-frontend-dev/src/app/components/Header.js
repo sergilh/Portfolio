@@ -8,7 +8,7 @@ const Header = () => {
 			<nav className="flex  items-center justify-center w-full px-5 py-4 border-white md:justify-between transition-all duration-500 ease-in">
 				<div className="flex  justify-center hidden md:inline-flex transition-all duration-500 animate-fade-in">
 					<a href="#home">
-						<h2 className=" font-[MainFont]  text-black text-center font-bold text-4xl gap-2  hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200 cursor-pointer">
+						<h2 className=" font-[MainFont]  text-black text-center font-bold text-4xl gap-2  hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200 cursor-pointer ">
 							Portfolio
 						</h2>
 					</a>

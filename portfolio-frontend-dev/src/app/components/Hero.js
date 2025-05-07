@@ -46,14 +46,14 @@ const Hero = () => {
 								return (
 									<span
 										key={index}
-										className="letter-hover-effect cursor-pointer text-black"
+										className="letter-hover-effect cursor-pointer text-black   "
 									>
 										{letter}
 									</span>
 								);
 							})}
 						</motion.h1>
-						<p className="text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4 ">
+						<p className=" text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4   ">
 							Sergi López Hernández
 						</p>
 						<p className="font-[Arial] text-[1.7rem] p-5 text-black  text-center text-4xl mt-4 ">
