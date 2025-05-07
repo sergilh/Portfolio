@@ -17,7 +17,8 @@
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.3",
     "react-type-animation": "^3.2.0",
-    "simple-parallax-js": "^6.1.1"
+    "simple-parallax-js": "^6.1.1",
+    "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

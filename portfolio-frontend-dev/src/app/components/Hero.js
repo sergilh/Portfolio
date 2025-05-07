@@ -9,9 +9,12 @@ import {
 	motion,
 	useMotionValueEvent,
 } from "framer-motion";
+/*Componentes*/
 import AboutMe from "./AboutMe";
+import Skills from "./Skills";
 
 const Hero = () => {
+	/*Animaciones Scroll*/
 	const [effectFinish, setEffectFinish] = useState(false);
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
@@ -22,7 +25,7 @@ const Hero = () => {
 	const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		setEffectFinish(latest >= 0.7);
+		setEffectFinish(latest >= 0.3);
 	});
 
 	const text = "Developer";
@@ -30,7 +33,7 @@ const Hero = () => {
 	return (
 		<>
 			<section ref={ref} id="home" className="h-[100vh]">
-				<div className="sticky top-0 h-screen scroll-smooth bg-cover bg-end bg-repeat-space flex items-center justify-center p-10">
+				<div className=" h-screen scroll-smooth bg-cover bg-end bg-repeat-space flex items-center justify-center p-10 bg-gradient-to-b from-white to-purple-300">
 					<motion.div
 						style={{ scale, opacity }}
 						className=" w-full h-full items-center justify-center pt-30"
@@ -44,7 +47,7 @@ const Hero = () => {
 								return (
 									<span
 										key={index}
-										className="letter-hover-effect cursor-pointer"
+										className="letter-hover-effect cursor-pointer text-black"
 									>
 										{letter}
 									</span>
@@ -54,7 +57,7 @@ const Hero = () => {
 						<p className="text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4 ">
 							Sergi López Hernández
 						</p>
-						<p className="font-[Arial] text-[1.7rem] p-5 text-white text-transparent bg-clip-text bg-linear-65 from-purple-500 to-blue-800 text-center text-4xl mt-4 ">
+						<p className="font-[Arial] text-[1.7rem] p-5 text-black  text-center text-4xl mt-4 ">
 							<TypeAnimation
 								sequence={[
 									"Web developer",
@@ -71,7 +74,7 @@ const Hero = () => {
 						</p>
 						<button
 							type="button"
-							className="flex border-[#c300ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#c300ff] hover:shadow-[#4400ff] hover:border-[#4400ff]  transition duration-500 text-white items-center justify-center text-center cursor-pointer"
+							className="flex border-[#c300ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#c300ff] hover:shadow-[#4400ff] hover:border-[#4400ff]  transition duration-500 text-white bg-black hover:bg-white hover:text-black items-center justify-center text-center cursor-pointer"
 						>
 							View Projects
 						</button>

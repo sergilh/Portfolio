@@ -29,6 +29,7 @@ const Home = () => {
 			{loading && <Preloader />}
 			<motion.div
 				id="scroll-indicator"
+				className="bg-linear-to-r from-purple-500 to-blue-600"
 				style={{
 					scaleX,
 					position: "fixed",
@@ -37,7 +38,6 @@ const Home = () => {
 					right: 0,
 					height: 10,
 					originX: 0,
-					backgroundColor: "#ff0088",
 					zIndex: 50,
 				}}
 			/>
