@@ -1,0 +1,12 @@
+
+.iconTech{
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.iconTech:hover{
+    transform: scale(1.4);
+    filter: brightness(1.4) ;
+    --webkit-filter: brightness(1.4);
+}
+

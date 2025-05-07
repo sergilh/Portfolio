@@ -1,5 +1,6 @@
 "use client";
 import StackIcon from "tech-stack-icons";
+import styles from "./Skills.module.css";
 const Skills = () => {
 	return (
 		<section className="mt-40">
@@ -8,18 +9,24 @@ const Skills = () => {
 					My Skills
 				</h2>
 				<div className="flex-col ">
-					<div className="flex justify-center items-center gap-15 my-20">
-						<StackIcon name="js" />
-						<StackIcon name="typescript" />
-						<StackIcon name="reactjs" />
-						<StackIcon name="nextjs2" />
-						<StackIcon name="vuejs" />
+					<div className="flex justify-center items-center gap-15 my-20 ">
+						<StackIcon name="js" className={styles.iconTech} />
+						<StackIcon
+							name="typescript"
+							className={styles.iconTech}
+						/>
+						<StackIcon name="reactjs" className={styles.iconTech} />
+						<StackIcon name="nextjs2" className={styles.iconTech} />
+						<StackIcon name="vuejs" className={styles.iconTech} />
 					</div>
 					<div className="flex justify-center items-center gap-15">
-						<StackIcon name="html5" />
-						<StackIcon name="css3" />
-						<StackIcon name="tailwindcss" />
-						<StackIcon name="git" />
+						<StackIcon name="html5" className={styles.iconTech} />
+						<StackIcon name="css3" className={styles.iconTech} />
+						<StackIcon
+							name="tailwindcss"
+							className={styles.iconTech}
+						/>
+						<StackIcon name="git" className={styles.iconTech} />
 					</div>
 				</div>
 			</div>

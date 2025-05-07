@@ -11,7 +11,6 @@ import {
 } from "framer-motion";
 /*Componentes*/
 import AboutMe from "./AboutMe";
-import Skills from "./Skills";
 
 const Hero = () => {
 	/*Animaciones Scroll*/
