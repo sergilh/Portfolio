@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'ThirdFont';
-  src: url('/fonts/MarlinSoftBasic-Regular.otf') format('opentype');
+  src: url('/fonts/Poppins/Poppins-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -139,6 +139,18 @@ main{
     }
 }
 
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
 @keyframes slideIn{
   from {
       transform: translateX(var(--start-position,-100%));
@@ -155,6 +167,10 @@ main{
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
   animation-duration: 1.2s;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.8s ease-out forwards;
 }
 
 /* Zoom out efect */

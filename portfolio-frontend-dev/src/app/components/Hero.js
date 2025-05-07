@@ -22,7 +22,7 @@ const Hero = () => {
 	const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		setEffectFinish(latest >= 0.9);
+		setEffectFinish(latest >= 0.7);
 	});
 
 	const text = "Developer";
@@ -85,8 +85,8 @@ const Hero = () => {
 						</div>
 					</motion.div>
 				</div>
+				<AboutMe />
 			</section>
-			{effectFinish && <AboutMe />}
 		</>
 	);
 };
