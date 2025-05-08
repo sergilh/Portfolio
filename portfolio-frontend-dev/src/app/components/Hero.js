@@ -31,14 +31,14 @@ const Hero = () => {
 
 	return (
 		<>
-			<section ref={ref} id="home" className="h-[100vh]">
+			<section ref={ref} id="home" className="dark h-[100vh]">
 				<div className=" h-screen scroll-smooth bg-cover bg-end bg-repeat-space flex items-center justify-center p-10 bg-gradient-to-b from-white to-purple-300">
 					<motion.div
 						style={{ scale, opacity }}
-						className=" w-full h-full items-center justify-center pt-30"
+						className=" w-full h-full items-center justify-center pt-30  "
 					>
 						<motion.h1 className="text-white md:text-9xl text-6xl transition-all duration-500  text-center">
-							<span className="text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text ">
+							<span className="bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text dark:text-white  text-transparent ">
 								Frontend
 							</span>{" "}
 							<br />
@@ -46,7 +46,7 @@ const Hero = () => {
 								return (
 									<span
 										key={index}
-										className="letter-hover-effect cursor-pointer text-black   "
+										className="letter-hover-effect cursor-pointer text-black  dark:text-white  "
 									>
 										{letter}
 									</span>
@@ -56,7 +56,12 @@ const Hero = () => {
 						<p className=" text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4   ">
 							Sergi López Hernández
 						</p>
-						<p className="font-[Arial] text-[1.7rem] p-5 text-black  text-center text-4xl mt-4 ">
+						<motion.p
+							style={{
+								opacity: effectFinish > 0.99 ? 0 : opacity,
+							}}
+							className="font-[Arial] text-[1.7rem] p-5 text-black  text-center text-4xl mt-4 cursor-default"
+						>
 							<TypeAnimation
 								sequence={[
 									"Web developer",
@@ -70,10 +75,10 @@ const Hero = () => {
 								speed={55}
 								repeat={Infinity}
 							/>
-						</p>
+						</motion.p>
 						<button
 							type="button"
-							className="flex border-[#c300ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#c300ff] hover:shadow-[#4400ff] hover:border-[#4400ff]  transition duration-500 text-white bg-black hover:bg-white hover:text-black items-center justify-center text-center cursor-pointer"
+							className="flex border-[#4400ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#4400ff]    transition duration-500  text-white bg-black hover:bg-white hover:text-black items-center justify-center text-center cursor-pointer"
 						>
 							View Projects
 						</button>

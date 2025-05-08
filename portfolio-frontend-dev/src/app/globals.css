@@ -1,16 +1,21 @@
 @import "tailwindcss";
-
+@import url('./animations.css');
+/* ============================= */
+/*         VARIABLES            */
+/* ============================= */
 
 :root {
   --background: #ffffff;
   --foreground: #000000;
 }
 
-/* Configuración para el modo oscuro */
-.dark {
+:root.dark {
   --background: #000000;
   --foreground: #ededed;
 }
+/* ============================= */
+/*        FUENTES PERSONALIZADAS */
+/* ============================= */
 
 @font-face {
   font-family: 'MainFont';
@@ -33,6 +38,10 @@
   font-style: normal;
 }
 
+/* ============================= */
+/*       ESTILOS GENERALES      */
+/* ============================= */
+
 html{
   scroll-behavior: smooth;
 }
@@ -40,9 +49,6 @@ html{
 
 body {
   background: var(--background);
-  color: var(--foreground);
-
-  
   color: var(--foreground);
   font-family:  'MainFont',Arial, Helvetica, sans-serif;
 }
@@ -54,99 +60,7 @@ main{
 
 
 
-@keyframes fade-in-body{
-  0%{
-  opacity: 0;
-    transform: scale(0.99);
-  }
-  100%{
-  opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-
-.neon-button {
-  position: relative;
-  padding: 12px 24px;
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  z-index: 1;
-  cursor: pointer;
-  overflow: hidden;
-  
-}
-
-.neon-button::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(270deg, #ffffff, #c300ff, #4400ff,#fb8fff);
-  z-index: -1;
-  border-radius: 10px;
-  background-size: 600% 600%;
-  animation: neonBorder 6s linear infinite;
-}
-
-.neon-button:hover{
-  transform:scale(1.1);
-  transition-duration: 0.3s;
-}
-
-
-/* Animación para section About */
-@keyframes fade-in {
-  0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-}
-
-@keyframes slideIn{
-  from {
-      transform: translateX(var(--start-position,-100%));
-    }
-  
-    to {
-      transform: translateX(0);
-    }
-  }
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Clases de animación */
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
@@ -163,7 +77,44 @@ main{
   animation: fade-out 0.8s ease-out forwards;
 }
 
-/* Zoom out efect */
+/* BUTTONS */
+.neon-button {
+  position: relative;
+  padding: 12px 24px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: rgb(0, 0, 0) 0px 0px 6px;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+}
+.neon-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, #a620ff, #4400ff, #ffffff 40%);
+  z-index: -1;
+  border-radius: 10px;
+  background-size: 600% 600%;
+  animation: neonBorder 6s linear infinite;
+}
+
+.neon-button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
 
 .hero-section{
   transition: transform 1s ease-out
@@ -172,9 +123,7 @@ main{
 .hero-section.zoom-out{
   transform:scale(0.8);
 }
-
-/* Hover letras individuales */
-
+/* LETRAS */
 .letter-hover-effect{
   display: inline-block;
   transition: all 0.3s ease;
@@ -185,7 +134,7 @@ main{
   transform: scale(1);
 }
 
-/* Zoom in Effect */
+/* SLIDES */
 .slideIn{
   animation:slideIn 1s ease-out;
 }
