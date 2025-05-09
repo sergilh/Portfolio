@@ -4,11 +4,14 @@
 /*         VARIABLES            */
 /* ============================= */
 
-
+:root{
+  --background: #ffffff;
+    --foreground: #000000;
+}
 
 .dark {
   --background: #000000;
-  --foreground: #ededed;
+  --foreground: #ffffff;
 }
 
 /* ============================= */
@@ -57,7 +60,11 @@ main{
 }
 
 /* BORRAR PARA QUE VUELVA A LA NORMALIDAD LOS ESTILOS */
-header,
+@media (min-width: 768px) {
+  header {
+    background: none ;
+  }
+}
 main,
 section {
   background-color: var(--background);
@@ -65,7 +72,7 @@ section {
 }
 
 /* Estilos únicos de texto que NO AFECTAN en DarkMode */
-#text-color,h1,h2{
+#text-color,h1,h2,p{
   color: var(--foreground);
 }
 #text-color:hover{
@@ -75,16 +82,42 @@ section {
      40% );
   background-clip:text;
 }
-.bg-no-dark {
-  color: transparent;
-  background: linear-gradient(to bottom, white, #D6A3FF);
+#span-color{
+  color: var(--foreground);
 }
+#skills{
+  background: none;
+}
+#about-me-text.bg-dark{
+  background: var(--foreground);
+  color: var(--background);
+}
+
+
+
 .bg-dark{
   color: transparent;
   background: linear-gradient(to bottom,black 40%,
     #4400ff);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+#home.bg-dark {
+  color: transparent;
+  background: linear-gradient(to bottom, black 40%,
+      #6200ff);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about.bg-dark{
+  color: transparent;
+  background: linear-gradient(to bottom, #6200ff 40%, white);
+    /* Puedes ajustar color, porcentaje, o cualquier propiedad */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Clases de animación */
 

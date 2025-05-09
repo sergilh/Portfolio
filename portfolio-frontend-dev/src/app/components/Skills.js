@@ -14,7 +14,7 @@ const Skills = () => {
 	]);
 
 	return (
-		<section className="mt-40 p-20 ">
+		<section id="skills" className="mt-40 p-20 ">
 			<motion.div
 				ref={ref}
 				style={{ opacity, opacityOut }}

@@ -11,10 +11,10 @@ const Hero = () => {
 
 	return (
 		<>
-			<section id="home" className=" h-[100vh] ">
+			<section className="  h-[100vh] ">
 				<div
-					id="bg-dark"
-					className=" h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white to-purple-300"
+					id="home"
+					className="dark-target h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white to-purple-300"
 				>
 					<div className="flex justify-center items-center mt-2 ">
 						<Image
@@ -32,8 +32,9 @@ const Hero = () => {
 						{text.split("").map((letter, index) => {
 							return (
 								<span
+									id="span-color"
 									key={index}
-									className="letter-hover-effect cursor-pointer text-black   "
+									className="letter-hover-effect cursor-pointer text-black "
 								>
 									{letter}
 								</span>

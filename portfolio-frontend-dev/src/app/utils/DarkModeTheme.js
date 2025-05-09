@@ -11,7 +11,7 @@ const DarkModeTheme = () => {
 
 	// Aplicar la clase dark al body cuando el estado cambie
 	useEffect(() => {
-		const containers = document.querySelectorAll("#bg-dark");
+		const containers = document.querySelectorAll(".dark-target");
 		if (isDarkMode) {
 			document.body.classList.add("dark");
 			containers.forEach((container) => {

@@ -9,7 +9,7 @@ const Header = () => {
 	// Cambiar entre modo oscuro y claro
 
 	return (
-		<header className=" bg-cover bg-end bg-no-repeat sticky top-0  bg-gradient-to-r from-purple-500 to-blue-600 md:bg-none transition-all duration-500 ease-in-out relative z-50 ">
+		<header className=" bg-cover bg-end bg-no-repeat  sticky top-0  bg-gradient-to-r from-purple-500 to-blue-600 md:bg-none transition-all duration-500 ease-in-out relative z-50 ">
 			<nav className="flex  items-center justify-center w-full px-5 py-4 border-white md:justify-between transition-all duration-500 ease-in">
 				<div className="flex  justify-center hidden md:inline-flex transition-all duration-500 animate-fade-in">
 					<a href="#home">

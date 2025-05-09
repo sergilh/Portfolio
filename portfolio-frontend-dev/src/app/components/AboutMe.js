@@ -13,7 +13,7 @@ const AboutMe = () => {
 	return (
 		<section
 			id="about"
-			className="bg-[#8716f7] bg-linear-to-b from-purple-300 via-60% via-blue-300  rounded-b-[12vw] flex justify-center items-center scroll-smooth h-auto "
+			className=" dark-target bg-[#8716f7] bg-linear-to-b from-purple-300 via-60% via-blue-300  rounded-b-[12vw] flex justify-center items-center scroll-smooth h-auto "
 		>
 			<div className="relative flex mb-20 h-auto w-full">
 				<div className="flex flex-col items-center justify-center mt-20 px-6 text-center h-auto w-full">
@@ -30,7 +30,10 @@ const AboutMe = () => {
 							<div className="h-[2px] bg-gradient-to-l from-white to-purple-400 flex-grow mx-3"></div>
 						</div>
 
-						<p className="font-[ThirdFont] text-gray-800 text-lg md:text-xl leading-relaxed text-center">
+						<p
+							id="about-me-text"
+							className="dark-target font-[ThirdFont] text-gray-800 text-lg md:text-xl leading-relaxed text-center"
+						>
 							I&apos;m a passionate frontend developer deeply
 							connected to the world of web development. I love
 							crafting visually engaging, functional interfaces
