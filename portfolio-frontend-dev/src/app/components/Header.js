@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useTransform, useScroll, motion } from "framer-motion";
 
 const Header = () => {
 	return (

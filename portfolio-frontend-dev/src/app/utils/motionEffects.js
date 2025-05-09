@@ -1,5 +1,4 @@
-import React from "react";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { useTransform, useScroll } from "framer-motion";
 
 const useScrollOpacity = (ref, offset = ["start start", "end start"]) => {
 	const { scrollYProgress } = useScroll({

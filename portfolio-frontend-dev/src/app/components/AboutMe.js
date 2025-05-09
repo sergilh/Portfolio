@@ -1,32 +1,21 @@
-import { useState, useRef } from "react";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { useRef } from "react";
 import Skills from "./Skills";
-import useScrollOpacity from "../utils/motionEffects";
 
 const AboutMe = () => {
 	const ref = useRef(null);
 
-	const { opacity, opacityOut } = useScrollOpacity(ref, [
-		"start start",
-		"end start",
-	]);
 	return (
 		<section
 			id="about"
 			className="bg-[#8716f7] bg-linear-to-b from-purple-300 via-60% via-blue-300  rounded-b-[12vw] flex justify-center items-center scroll-smooth h-auto "
 		>
-			<div className="sticky top-0 flex mb-20 h-auto w-full">
+			<div className="relative flex mb-20 h-auto w-full">
 				<div className="flex flex-col items-center justify-center mt-20 px-6 text-center h-auto w-full">
 					<h2 className="font-[ThirdFont] text-white text-4xl md:text-5xl transition-all duration-200 mb-10 hover:text-white">
 						Hi, I&apos;m Sergi
 					</h2>
 
-					<motion.div
-						ref={ref}
-						style={{ opacity }}
-						transition={{ duration: 0.7 }}
-						className="w-full sm:max-w-3xl h-auto w-full bg-gradient-to-b from-white via-white to-purple-100 font-[SecondaryFont] flex flex-col  items-center justify-center backdrop-blur-sm border border-black/10 text-black px-8 py-8  rounded-3xl shadow-xl/30 transition-shadow duration-200  hover:shadow-2xl cursor-pointer"
-					>
+					<div className="w-full sm:max-w-3xl h-auto w-full bg-gradient-to-b from-white via-white to-purple-100 font-[SecondaryFont] flex flex-col  items-center justify-center  border border-black/10 text-black px-8 py-8  rounded-3xl shadow-xl/30 transition-shadow duration-200  hover:shadow-2xl cursor-pointer">
 						<div className="flex items-center justify-center w-full mb-6">
 							<div className="h-[2px] bg-gradient-to-r from-white to-purple-400 flex-grow mx-3"></div>
 							<h3 className="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600  uppercase whitespace-nowrap ">
@@ -52,7 +41,7 @@ const AboutMe = () => {
 								Download CV
 							</button>
 						</a>
-					</motion.div>
+					</div>
 					<Skills />
 				</div>
 			</div>
