@@ -47,12 +47,22 @@ const Header = () => {
 						className="w-auto cursor-pointer"
 						onClick={toggleTheme}
 					>
-						<Image
-							src="/moon_10238592.png"
-							alt="darkModeIcon"
-							width={25}
-							height={25}
-						></Image>
+						{isDarkMode ? (
+							<Image
+								src="/contrast_5811797.png"
+								alt="darkModeIcon"
+								width={25}
+								height={25}
+								className="invert"
+							></Image>
+						) : (
+							<Image
+								src="/moon_10238592.png"
+								alt="darkModeIcon"
+								width={25}
+								height={25}
+							></Image>
+						)}
 					</div>
 
 					<button
