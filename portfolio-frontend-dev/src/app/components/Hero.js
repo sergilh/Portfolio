@@ -8,10 +8,14 @@ import AboutMe from "./AboutMe";
 
 const Hero = () => {
 	const text = "Developer";
+
 	return (
 		<>
-			<section id="home" className="dark h-[100vh]">
-				<div className=" h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white to-purple-300">
+			<section id="home" className=" h-[100vh] ">
+				<div
+					id="bg-dark"
+					className=" h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white to-purple-300"
+				>
 					<div className="flex justify-center items-center mt-2 ">
 						<Image
 							src="/descargar (13) (1) (1).png"

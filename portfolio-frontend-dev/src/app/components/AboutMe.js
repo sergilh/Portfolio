@@ -1,9 +1,15 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
+import { useTransform, useScroll, motion } from "framer-motion";
 import Skills from "./Skills";
+import useScrollOpacity from "../utils/motionEffects";
 
 const AboutMe = () => {
 	const ref = useRef(null);
 
+	const { opacity, opacityOut } = useScrollOpacity(ref, [
+		"start start",
+		"end start",
+	]);
 	return (
 		<section
 			id="about"
