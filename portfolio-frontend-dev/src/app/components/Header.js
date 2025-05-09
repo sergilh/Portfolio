@@ -17,22 +17,24 @@ const Header = () => {
 						height={60}
 					/>
 				</div>
-				<div className="flex flex-col md:flex-row gap-10 items-center justify-center transition-all duration-500 ease-in-out ">
-					<button
-						type="button"
-						className="text-[#9526f0]  font-bold text-2xl cursor-pointer transition-colors duration-300 ease-in "
-					>
-						<span className="text-black hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200">
-							Projects
-						</span>
-					</button>
+				<div className="flex flex-col md:flex-row gap-6 items-center justify-center transition-all duration-500 ease-in-out  ">
+					<span className="text-black text-2xl hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200">
+						Projects
+					</span>
 					<a href="#about">
-						<span className="text-[#9526f0] font-bold text-2xl cursor-pointer hover:text-white transition-colors transition duration-400">
-							<span className="text-black hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200">
-								About
-							</span>
+						<span className="text-black text-2xl hover:text-transparent bg-linear-to-r from-purple-500 to-blue-600 bg-clip-text transition duration-200">
+							About
 						</span>
 					</a>
+
+					<div className="w-auto cursor-pointer">
+						<Image
+							src="/moon_10238592.png"
+							alt="darkModeIcon"
+							width={25}
+							height={25}
+						></Image>
+					</div>
 
 					<button
 						type="button"
