@@ -85,6 +85,9 @@ section {
 #span-color{
   color: var(--foreground);
 }
+#span-color:hover {
+  color: #4400ff;
+}
 #skills{
   background: none;
 }
@@ -93,6 +96,13 @@ section {
   color: var(--background);
 }
 
+#neon-color{
+  color: transparent;
+    background: linear-gradient(to right, #a620ff,
+        #4400ff,
+        40%);
+    background-clip: text;
+}
 
 
 .bg-dark{
@@ -106,19 +116,28 @@ section {
 #home.bg-dark {
   color: transparent;
   background: linear-gradient(to bottom, black 40%,
-      #6200ff);
+      #5900ff);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #about.bg-dark{
   color: transparent;
-  background: linear-gradient(to bottom, #6200ff 40%, white);
+  background: linear-gradient(to bottom, #5900ff 1%, #ffffff);
     /* Puedes ajustar color, porcentaje, o cualquier propiedad */
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+#view-projects-button.bg-dark{
+  background: var(--foreground);
+  color: var(--background);
+}
+
+#view-projects-button.bg-dark:hover {
+  background: var(--background);
+  color: var(--foreground);
+}
 /* Clases de animación */
 
 .animate-fade-in-up {

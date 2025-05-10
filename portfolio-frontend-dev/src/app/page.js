@@ -42,7 +42,7 @@ const Home = () => {
 				}}
 			/>
 			<main
-				className="flex-col w-full min-h-[300vh]"
+				className="flex-col w-full min-h-[300vh] "
 				style={{ opacity: loading ? 0 : 1 }}
 			>
 				<Header />

@@ -13,7 +13,7 @@ const AboutMe = () => {
 	return (
 		<section
 			id="about"
-			className=" dark-target bg-[#8716f7] bg-linear-to-b from-purple-300 via-60% via-blue-300  rounded-b-[12vw] flex justify-center items-center scroll-smooth h-auto "
+			className=" dark-target bg-[#8716f7] bg-linear-to-b from-[#954fff] via-60% via-blue-300  rounded-b-[12vw] flex justify-center items-center scroll-smooth h-auto "
 		>
 			<div className="relative flex mb-20 h-auto w-full">
 				<div className="flex flex-col items-center justify-center mt-20 px-6 text-center h-auto w-full">

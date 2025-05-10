@@ -11,10 +11,10 @@ const Hero = () => {
 
 	return (
 		<>
-			<section className="  h-[100vh] ">
+			<section className=" h-[100vh] snap-start ">
 				<div
 					id="home"
-					className="dark-target h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white to-purple-300"
+					className=" dark-target h-screen scroll-smooth  flex flex-col items-center justify-start p-10 bg-gradient-to-b from-white via-white via-40% to-[#954fff]"
 				>
 					<div className="flex justify-center items-center mt-2 ">
 						<Image
@@ -41,7 +41,10 @@ const Hero = () => {
 							);
 						})}
 					</h1>
-					<p className=" text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4   ">
+					<p
+						id="neon-color"
+						className=" text-[#8716f7] text-transparent  bg-clip-text bg-linear-to-l from-purple-500 to-blue-600 text-center text-3xl  text-wrap md:text-4xl mt-4   "
+					>
 						Sergi López Hernández
 					</p>
 					<p className="font-[Arial] text-[1.5rem] md:text-[1.7rem] p-5 text-black  text-center text-4xl mt-4 cursor-default">
@@ -60,8 +63,9 @@ const Hero = () => {
 						/>
 					</p>
 					<button
+						id="view-projects-button"
 						type="button"
-						className="flex border-[#4400ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#4400ff]    transition duration-500  text-white bg-black hover:bg-white hover:text-black items-center justify-center text-center cursor-pointer"
+						className="dark-target flex border-[#4400ff] mx-auto mt-15 rounded-full border-3 p-3 shadow-lg  shadow-[#4400ff]    transition duration-500  text-white bg-black hover:bg-white hover:text-black items-center justify-center text-center cursor-pointer"
 					>
 						View Projects
 					</button>
